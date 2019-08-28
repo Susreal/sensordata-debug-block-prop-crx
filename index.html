@@ -19,7 +19,7 @@
     <form class="layui-form" action="" lay-filter="sensor-data">
         <div class="layui-form-item" pane="">
             <label class="layui-form-label">原始复选框</label>
-            <div class="layui-input-block" id="default-prop-settings">
+            <div class="layui-input-block" id="default_block_props">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="A" lay-skin="primary" title="A" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="B" lay-skin="primary" title="B" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="C" lay-skin="primary" title="C" checked="">
@@ -32,7 +32,12 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">普通文本域</label>
             <div class="layui-input-block">
-              <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+              <textarea name="input_block_props" placeholder="请输入内容" class="layui-textarea" id="input_block_props"></textarea>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit="" lay-filter="demo1">保存</button>
             </div>
           </div>
     </form>
