@@ -1,0 +1,14 @@
+.page {
+  width: 460px;
+  /* height: 500px; */
+  margin: 10px 10px 10px 10px;
+}
+
+.layui-form-pane .layui-form-label {
+    width: 80px;
+}
+
+.layui-form-item .layui-input-inline {
+    width: 150px;
+    /* margin: 0 0 10px 82px; */
+}

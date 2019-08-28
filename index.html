@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>APP</title>
+    <meta name="Keywords" content="APP"/>
+    <meta name="Description" content="APP"/>
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/utils.js"></script>
+</head>
+
+<body class="page">
+    <form class="layui-form layui-form-pane" action="" lay-filter="search">
+        <div class="layui-form-item">
+            <label id="label-name" class="layui-form-label">应用名</label>
+            <div class="layui-input-inline">
+                <input id="app_name" type="text" name="app_name" lay-verify="app_name" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+            <button id="search_btn" lay-submit lay-filter="search_app" type="button" class="layui-btn layui-btn-disabled">搜地址</button>
+            <button id="reset_btn" lay-filter="reset_info" type="button" class="layui-btn">重置</button>
+            <i id="update_btn" class="layui-icon layui-icon-refresh-3" style="color: #009688;"></i>
+            <!-- <button id="update_btn" lay-filter="update_info" type="button" class="layui-btn"><i class="layui-icon layui-icon-refresh-3"></i></button> -->
+        </div>
+    </form>
+
+    <table id="shops" lay-filter="shops"></table>
+    <script type="text/html" id="editBar">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    </script>
+
+    <script src="layui/layui.js"></script>
+    <script src="js/initLayui.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
