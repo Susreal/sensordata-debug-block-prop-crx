@@ -12,27 +12,30 @@
     <link rel="stylesheet" href="css/index.css"/>
 
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/utils.js"></script>
+    <!-- <script src="js/utils.js"></script> -->
 </head>
 
 <body class="page">
-    <form class="layui-form layui-form-pane" action="" lay-filter="search">
-        <div class="layui-form-item">
-            <label id="label-name" class="layui-form-label">应用名</label>
-            <div class="layui-input-inline">
-                <input id="app_name" type="text" name="app_name" lay-verify="app_name" autocomplete="off" placeholder="请输入标题" class="layui-input">
+    <form class="layui-form" action="" lay-filter="sensor-data">
+        <div class="layui-form-item" pane="">
+            <label class="layui-form-label">原始复选框</label>
+            <div class="layui-input-block" id="default-prop-settings">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="A" lay-skin="primary" title="A" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="B" lay-skin="primary" title="B" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="C" lay-skin="primary" title="C" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="D" lay-skin="primary" title="D" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="E" lay-skin="primary" title="E" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="F" lay-skin="primary" title="F" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="G" lay-skin="primary" title="G" checked="">
             </div>
-            <button id="search_btn" lay-submit lay-filter="search_app" type="button" class="layui-btn layui-btn-disabled">搜地址</button>
-            <button id="reset_btn" lay-filter="reset_info" type="button" class="layui-btn">重置</button>
-            <i id="update_btn" class="layui-icon layui-icon-refresh-3" style="color: #009688;"></i>
-            <!-- <button id="update_btn" lay-filter="update_info" type="button" class="layui-btn"><i class="layui-icon layui-icon-refresh-3"></i></button> -->
         </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">普通文本域</label>
+            <div class="layui-input-block">
+              <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+            </div>
+          </div>
     </form>
-
-    <table id="shops" lay-filter="shops"></table>
-    <script type="text/html" id="editBar">
-        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-    </script>
 
     <script src="layui/layui.js"></script>
     <script src="js/initLayui.js"></script>

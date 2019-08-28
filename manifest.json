@@ -1,6 +1,6 @@
 {
-  "name": "app version in shops",
-  "description": "app version in each shop",
+  "name": "神策DEBUG助手",
+  "description": "sensordata-debug-block-prop-crx",
   "version": "1.0",
   "manifest_version": 2,
   "browser_action": {
@@ -8,13 +8,15 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
+    "tabs",
     "storage",
     "http://*/*",
     "https://*/*"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "check_update_url": "https://raw.githubusercontent.com/Susreal/app-version-in-shops-crx/master/getCrxInfo.json",
-  "gitHub_homePage": "https://github.com/Susreal/app-version-in-shops-crx/"
+  "content_scripts": [
+    {
+      "matches": ["https://*.baidu.com/*"], 
+      "js": ["js/content_script.js"]
+    }
+  ]
 }
