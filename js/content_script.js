@@ -1,31 +1,28 @@
-
-var change = setInterval(function(){
-    // chrome.runtime.sendMessage("GET_ALL_BLOCK_PROPS", function(response){
-    //     console.log(response);
-    // });
-
+var optimize = setInterval(function(){
     let data = document.getElementsByClassName("data-json");
     for (let i=0;i<data.length;i++) {
-        let temp = JSON.parse(data[i].innerText)[0];
-        if (temp.hasOwnProperty("prop")) continue;
-        let new_obj = new Object();
-        if (temp) {
-            let prop = temp.properties;
+        let old_obj = JSON.parse(data[i].innerText)[0];    
+        if (old_obj) {
+            if (old_obj.hasOwnProperty("prop")) continue;
+            
+            let new_obj = {};
+            let prop = JSON.parse(JSON.stringify(old_obj.properties));
 
-            // 发送消息，回调函数把接收到的回应写到网页中
+            // 发送消息给background以获得完整的屏蔽属性
             chrome.runtime.sendMessage("GET_ALL_BLOCK_PROPS", function(response){
-                let all_block_props = response;
-                for (let j=0;j<all_block_props.length;j++) {
-                    delete prop[all_block_props[j]];
+                if (response.success) {
+                    for (let j=0;j<response.data.length;j++) {
+                        delete prop[response.data[j]];
+                    }
                 }
-                
             });
-            // new_obj.time = temp.time;
-            new_obj.event = temp.event;
-            new_obj.prop = prop;            
-        }
-        let new_obj_str = JSON.stringify(new_obj);
-        new_obj_str = new_obj_str.replace(/,/g, ",<br>");
-        data[i].innerHTML = "[" + new_obj_str + "]";
+            // new_obj.time = old_obj.time;
+            new_obj.event = old_obj.event;
+            new_obj.prop = JSON.parse(JSON.stringify(prop));     
+            
+            let new_obj_str = JSON.stringify(new_obj);
+            // new_obj_str = new_obj_str.replace(/,/g, ",<br>");
+            data[i].innerHTML = "[" + new_obj_str + "]";
+        } 
     }
 }, 500);

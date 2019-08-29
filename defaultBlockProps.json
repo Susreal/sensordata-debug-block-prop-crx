@@ -30,12 +30,6 @@
         "name": "$manufacturer",
         "checked": true
     },{
-        "name": "$manufacturer",
-        "checked": true
-    },{
-        "name": "$manufacturer",
-        "checked": true
-    },{
         "name": "$wifi",
         "checked": true
     },{
@@ -43,12 +37,6 @@
         "checked": true
     },{
         "name": "$lib_version",
-        "checked": true
-    },{
-        "name": "$ip",
-        "checked": true
-    },{
-        "name": "$ip",
         "checked": true
     },{
         "name": "$ip",
@@ -70,12 +58,6 @@
         "checked": true
     },{
         "name": "$browser",
-        "checked": true
-    },{
-        "name": "app_name",
-        "checked": true
-    },{
-        "name": "channel",
         "checked": true
     }
 ]

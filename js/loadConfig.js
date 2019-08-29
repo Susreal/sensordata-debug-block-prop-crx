@@ -2,7 +2,7 @@ function renderInput() {
     $.ajaxSettings.async = false;
     let default_block_props_str = localStorage.getItem("default_block_props");
     if (!default_block_props_str) {
-        $.get("/js/defaultBlockProps.json", function(data){
+        $.get("defaultBlockProps.json", function(data){
             let data_str = JSON.stringify(data);
             localStorage.setItem("default_block_props", data_str);
         }); 
