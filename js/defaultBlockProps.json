@@ -1,0 +1,81 @@
+[
+    {
+        "name": "$device_id",
+        "checked": true
+    },{
+        "name": "$os_version",
+        "checked": true
+    },{
+        "name": "$carrier",
+        "checked": true
+    },{
+        "name": "$os",
+        "checked": true
+    },{
+        "name": "$screen_height",
+        "checked": true
+    },{
+        "name": "$screen_width",
+        "checked": true
+    },{
+        "name": "$model",
+        "checked": true
+    },{
+        "name": "$lib",
+        "checked": true
+    },{
+        "name": "$network_type",
+        "checked": true
+    },{
+        "name": "$manufacturer",
+        "checked": true
+    },{
+        "name": "$manufacturer",
+        "checked": true
+    },{
+        "name": "$manufacturer",
+        "checked": true
+    },{
+        "name": "$wifi",
+        "checked": true
+    },{
+        "name": "$is_first_day",
+        "checked": true
+    },{
+        "name": "$lib_version",
+        "checked": true
+    },{
+        "name": "$ip",
+        "checked": true
+    },{
+        "name": "$ip",
+        "checked": true
+    },{
+        "name": "$ip",
+        "checked": true
+    },{
+        "name": "$is_login_id",
+        "checked": true
+    },{
+        "name": "$city",
+        "checked": true
+    },{
+        "name": "$province",
+        "checked": true
+    },{
+        "name": "$country",
+        "checked": true
+    },{
+        "name": "$app_version",
+        "checked": true
+    },{
+        "name": "$browser",
+        "checked": true
+    },{
+        "name": "app_name",
+        "checked": true
+    },{
+        "name": "channel",
+        "checked": true
+    }
+]

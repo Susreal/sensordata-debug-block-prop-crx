@@ -18,21 +18,21 @@
 <body class="page">
     <form class="layui-form" action="" lay-filter="sensor-data">
         <div class="layui-form-item" pane="">
-            <label class="layui-form-label">原始复选框</label>
+            <label class="layui-form-label">神策自带属性</label>
             <div class="layui-input-block" id="default_block_props">
-              <input type="checkbox" lay-filter="checkbox-default-prop" name="A" lay-skin="primary" title="A" checked="">
+              <!-- <input type="checkbox" lay-filter="checkbox-default-prop" name="A" lay-skin="primary" title="A" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="B" lay-skin="primary" title="B" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="C" lay-skin="primary" title="C" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="D" lay-skin="primary" title="D" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="E" lay-skin="primary" title="E" checked="">
               <input type="checkbox" lay-filter="checkbox-default-prop" name="F" lay-skin="primary" title="F" checked="">
-              <input type="checkbox" lay-filter="checkbox-default-prop" name="G" lay-skin="primary" title="G" checked="">
+              <input type="checkbox" lay-filter="checkbox-default-prop" name="G" lay-skin="primary" title="G" checked=""> -->
             </div>
         </div>
         <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">普通文本域</label>
+            <label class="layui-form-label">自定义屏蔽属性</label>
             <div class="layui-input-block">
-              <textarea name="input_block_props" placeholder="请输入内容" class="layui-textarea" id="input_block_props"></textarea>
+              <textarea name="input_block_props" placeholder="一行一条，无需引号" class="layui-textarea" id="input_block_props"></textarea>
             </div>
           </div>
           <div class="layui-form-item">
@@ -42,6 +42,7 @@
           </div>
     </form>
 
+    <script src="js/loadConfig.js"></script>
     <script src="layui/layui.js"></script>
     <script src="js/initLayui.js"></script>
     <script src="js/index.js"></script>

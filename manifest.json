@@ -13,10 +13,16 @@
     "http://*/*",
     "https://*/*"
   ],
+  "background": {
+    "scripts": [
+      "js/jquery-3.4.1.min.js",
+      "js/background.js"
+    ]
+   },
   "content_scripts": [
     {
       "matches": ["https://*.baidu.com/*"], 
-      "js": ["js/content_script.js"]
+      "js": ["js/jquery-3.4.1.min.js","js/content_script.js"]
     }
   ]
 }

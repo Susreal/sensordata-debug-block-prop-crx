@@ -52,33 +52,8 @@ function updateInputPropSettings() {
     localStorage.setItem("input_block_props",JSON.stringify(input_block_props_list));
 }
 
-// 获取所有屏蔽属性
-function getAllBlockProps() {
-    let all_block_props = [];
-    let input_block_props_str = localStorage.getItem("input_block_props");
-    if (input_block_props_str) {
-        let input_block_props = JSON.parse(input_block_props_str);
-        all_block_props.push.apply(all_block_props,input_block_props);
-    }
-    let default_block_props_str = localStorage.getItem("default_block_props");
-    if (default_block_props_str) {
-        console.log(default_block_props_str);
-        let default_block_props = JSON.parse(default_block_props_str);
-        console.log(default_block_props);
-        for (let i=0;i<default_block_props.length;i++) {
-            if (default_block_props[i].checked) {
-                all_block_props.push(default_block_props[i].name);
-            }
-        }
-    }
-    console.log(all_block_props);
-    localStorage.setItem("all_block_props", JSON.stringify(all_block_props));
-
-}
-
 loadDefaultPropSettings();
 loadInputPropSettings();
-getAllBlockProps();
 
 layui.use(['layer', 'form'], function(){
     var layer = layui.layer
