@@ -21,8 +21,9 @@
    },
   "content_scripts": [
     {
-      "matches": ["https://*.baidu.com/*"], 
-      "js": ["js/jquery-3.4.1.min.js","js/content_script.js"]
+      "matches": ["https://*.baidu.com/*","http://test.compass.cs/data-stream/*/"], 
+      "css": ["css/atom-one-dark.css"],
+      "js": ["js/jquery-3.4.1.min.js","js/highlight.pack.js","js/content_script.js"]
     }
   ]
 }
